@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "admin"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "changeme123"
+      - key: N8N_PROTOCOL
+        value: "https"
+      - key: N8N_PORT
+        value: "5678"
+      - key: WEBHOOK_URL
+        value: "https://datamedia.onrender.com/"
+      - key: EXECUTIONS_PROCESS
+        value: "main"
+      - key: GENERIC_TIMEZONE
+        value: "Europe/London"
+    disk:
+      name: n8n-data
+      mountPath: /home/node/.n8n
+      sizeGB: 1
