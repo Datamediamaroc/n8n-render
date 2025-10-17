@@ -16,7 +16,7 @@ services:
       - key: N8N_PORT
         value: "5678"
       - key: WEBHOOK_URL
-        value: "https://datamedia.onrender.com/"
+        value: "https://n8n-ip3t.onrender.com"
       - key: EXECUTIONS_PROCESS
         value: "main"
       - key: GENERIC_TIMEZONE
